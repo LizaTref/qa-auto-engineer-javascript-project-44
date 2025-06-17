@@ -6,3 +6,10 @@ brain-games:
 
 publish:
 	npm publish --dry-run
+
+.PHONY: lint
+
+lint:
+	npx eslint . --ext .js,.ts || (echo "Ошибки найдены" && exit 1)
+	@echo "Ошибок нет, всё отлично!"
+
