@@ -15,3 +15,6 @@
 
 ### asciinema brain-progression
 [![Смотреть запись](https://asciinema.org/a/8R8p6cTIyNmw7UMbxG8m7CABz.svg)](https://asciinema.org/a/8R8p6cTIyNmw7UMbxG8m7CABz)
+
+### asciinema brain-prime
+[![Смотреть запись](https://asciinema.org/a/4wIKbdgLt3O2pviwE05tc5gPq.svg)](https://asciinema.org/a/4wIKbdgLt3O2pviwE05tc5gPq)
