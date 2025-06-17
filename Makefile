@@ -13,3 +13,6 @@ lint:
 	npx eslint . --ext .js,.ts || (echo "Ошибки найдены" && exit 1)
 	@echo "Ошибок нет, всё отлично!"
 
+brain-even:
+	node bin/brain-even.js
+
