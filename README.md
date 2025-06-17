@@ -13,3 +13,5 @@
 ### asciinema brain-gcd
 [![Смотреть запись](https://asciinema.org/a/jNqPgWzzSZjRMnCwtcuEQjxw9.svg)](https://asciinema.org/a/jNqPgWzzSZjRMnCwtcuEQjxw9)
 
+### asciinema brain-progression
+[![Смотреть запись](https://asciinema.org/a/8R8p6cTIyNmw7UMbxG8m7CABz.svg)](https://asciinema.org/a/8R8p6cTIyNmw7UMbxG8m7CABz)
