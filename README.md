@@ -4,5 +4,8 @@
 ### sonarcloud
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=LizaTref_qa-auto-engineer-javascript-project-44&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=LizaTref_qa-auto-engineer-javascript-project-44)
 
-### asciinema
+### asciinema brain-even
 [![Смотреть запись](https://asciinema.org/a/5MvcpIrH9EU8vGPvNSsxjW9Ef.svg)](https://asciinema.org/a/5MvcpIrH9EU8vGPvNSsxjW9Ef)
+
+### asciinema brain-calc
+[![Смотреть запись](https://asciinema.org/a/jUimpqjWqGu9gs4eo7OITn5w6.svg)](https://asciinema.org/a/jUimpqjWqGu9gs4eo7OITn5w6)
