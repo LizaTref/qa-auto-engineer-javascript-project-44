@@ -2,7 +2,8 @@ import runGame from '../index.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomNumber = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
 
 const getGcd = (a, b) => {
   while (b !== 0) {

@@ -1,8 +1,10 @@
 import runGame from '../index.js';
 
-const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description =
+  'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomNumber = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
 
 const generateRound = () => {
   const number = getRandomNumber(1, 100);

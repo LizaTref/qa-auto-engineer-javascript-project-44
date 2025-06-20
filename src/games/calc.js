@@ -2,7 +2,8 @@ import runGame from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomNumber = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
 
 const generateRound = () => {
   const num1 = getRandomNumber(1, 50);
