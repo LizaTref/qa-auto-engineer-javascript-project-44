@@ -28,7 +28,8 @@ const generateRound = () => {
   for (let i = 0; i < progression.length; i += 1) {
     if (i === hiddenIndex) {
       questionParts.push('..');
-    } else {
+    } 
+    else {
       questionParts.push(String(progression[i]));
     }
   }
