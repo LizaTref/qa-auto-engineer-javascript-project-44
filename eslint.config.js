@@ -1,32 +1,20 @@
-// eslint.config.js
-import jsPkg from '@eslint/js';
-const { configs: jsConfigs } = jsPkg;
-
-import * as tseslint from '@typescript-eslint/eslint-plugin';
-import parser from '@typescript-eslint/parser';
+import js from '@eslint/js';
 import globals from 'globals';
 import { defineConfig } from 'eslint/config';
+import stylistic from '@stylistic/eslint-plugin';
 
 export default defineConfig([
+  stylistic.configs.recommended,
+
   {
-    files: ['**/*.{js,ts}'],
+    files: ['**/*.{js,mjs,cjs}'],
+    plugins: { js },
+    extends: ['js/recommended'],
     languageOptions: {
-      parser: parser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-      },
-      globals: {
-        ...globals.node,
-      },
-    },
-    plugins: {
-      '@typescript-eslint': tseslint,
+      globals: globals.browser,
     },
     rules: {
-      semi: ['error', 'always'],
-      quotes: ['error', 'single'],
+      '@stylistic/semi': ['error', 'always'], // Разрешать использовать в коде точки с запятой
     },
   },
-  jsConfigs.recommended,
 ]);
