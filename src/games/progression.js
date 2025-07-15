@@ -1,9 +1,7 @@
 import runGame from '../index.js'
+import { getRandomNumber } from '../utils.js'
 
 const description = 'What number is missing in the progression?'
-
-const getRandomNumber = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min
 
 const generateProgression = (start, step, length) => {
   const progression = []
@@ -24,17 +22,9 @@ const generateRound = () => {
   const hiddenIndex = getRandomNumber(0, length - 1)
   const correctAnswer = String(progression[hiddenIndex])
 
-  const questionParts = []
-  for (let i = 0; i < progression.length; i += 1) {
-    if (i === hiddenIndex) {
-      questionParts.push('..')
-    }
-    else {
-      questionParts.push(String(progression[i]))
-    }
-  }
-
-  const question = questionParts.join(' ')
+  const question = progression
+    .map((num, index) => (index === hiddenIndex ? '..' : String(num)))
+    .join(' ')
 
   return [question, correctAnswer]
 }
