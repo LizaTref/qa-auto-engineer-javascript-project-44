@@ -3,28 +3,35 @@ import { getRandomNumber } from '../utils.js'
 
 const description = 'What number is missing in the progression?'
 
-const generateProgression = (start, step, length) => {
+const START_MIN = 1
+const START_MAX = 10
+
+const STEP_MIN = 1
+const STEP_MAX = 5
+
+const PROGRESSION_LENGTH = 10
+
+export const generateProgression = (startNumber, stepNumber, length) => {
   const progression = []
   for (let i = 0; i < length; i += 1) {
-    const number = start + i * step
+    const number = startNumber + i * stepNumber
     progression.push(number)
   }
   return progression
 }
 
 const generateRound = () => {
-  const start = getRandomNumber(1, 10)
-  const step = getRandomNumber(1, 5)
-  const length = 10
+  const startNumber = getRandomNumber(START_MIN, START_MAX)
+  const stepNumber = getRandomNumber(STEP_MIN, STEP_MAX)
+  const length = PROGRESSION_LENGTH
 
-  const progression = generateProgression(start, step, length)
-
-  const hiddenIndex = getRandomNumber(0, length - 1)
+  const progression = generateProgression(startNumber, stepNumber, length)
+  const hiddenIndex = getRandomNumber(0, progression.length - 1)
   const correctAnswer = String(progression[hiddenIndex])
 
-  const question = progression
-    .map((num, index) => (index === hiddenIndex ? '..' : String(num)))
-    .join(' ')
+  progression[hiddenIndex] = '..'
+
+  const question = progression.join(' ')
 
   return [question, correctAnswer]
 }

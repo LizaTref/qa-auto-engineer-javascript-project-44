@@ -10,7 +10,7 @@
     "brain-progression": "bin/brain-progression.js",
     "brain-prime": "./bin/brain-prime.js"
   },
-  "description": "[![Actions Status](https://github.com/LizaTref/qa-auto-engineer-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/LizaTref/qa-auto-engineer-javascript-project-44/actions)",
+  "description": "Игры разума",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

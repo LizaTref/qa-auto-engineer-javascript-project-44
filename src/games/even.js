@@ -3,10 +3,15 @@ import { getRandomNumber } from '../utils.js'
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
+const MIN_NUMBER = 1
+const MAX_NUMBER = 100
+
+export const isEvenAnswer = number => (number % 2 === 0 ? 'yes' : 'no')
+
 const generateRound = () => {
-  const number = getRandomNumber(1, 100)
-  const correctAnswer = number % 2 === 0 ? 'yes' : 'no'
-  return [number.toString(), correctAnswer]
+  const number = getRandomNumber(MIN_NUMBER, MAX_NUMBER)
+  const correctAnswer = isEvenAnswer(number)
+  return [String(number), correctAnswer]
 }
 
 const runEvenGame = () => runGame(description, generateRound)

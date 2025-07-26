@@ -3,20 +3,21 @@ import { getRandomNumber } from '../utils.js'
 
 const description = 'Find the greatest common divisor of given numbers.'
 
-const getGcd = (a, b) => {
-  while (b !== 0) {
-    const temp = b
-    b = a % b
-    a = temp
+const MIN_NUMBER = 1
+const MAX_NUMBER = 100
+
+export const getGcd = (number1, number2) => {
+  if (number2 === 0) {
+    return number1
   }
-  return a
+  return getGcd(number2, number1 % number2)
 }
 
 const generateRound = () => {
-  const num1 = getRandomNumber(1, 100)
-  const num2 = getRandomNumber(1, 100)
-  const question = `${num1} ${num2}`
-  const correctAnswer = String(getGcd(num1, num2))
+  const number1 = getRandomNumber(MIN_NUMBER, MAX_NUMBER)
+  const number2 = getRandomNumber(MIN_NUMBER, MAX_NUMBER)
+  const question = `${number1} ${number2}`
+  const correctAnswer = String(getGcd(number1, number2))
   return [question, correctAnswer]
 }
 
