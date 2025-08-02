@@ -1,8 +1,7 @@
 import runGame from '../index.js'
 import { getRandomNumber } from '../utils.js'
 
-const description = 'What is the result of the expression?'
-
+const DESCRIPTION = 'What is the result of the expression?'
 const MIN_NUMBER = 1
 const MAX_NUMBER = 50
 const OPERATORS = ['+', '-', '*']
@@ -30,6 +29,6 @@ const generateRound = () => {
   return [question, String(result)]
 }
 
-const runCalcGame = () => runGame(description, generateRound)
+const runCalcGame = () => runGame(DESCRIPTION, generateRound)
 
 export default runCalcGame

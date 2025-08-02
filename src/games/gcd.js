@@ -1,8 +1,7 @@
 import runGame from '../index.js'
 import { getRandomNumber } from '../utils.js'
 
-const description = 'Find the greatest common divisor of given numbers.'
-
+const DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 const MIN_NUMBER = 1
 const MAX_NUMBER = 100
 
@@ -21,6 +20,6 @@ const generateRound = () => {
   return [question, correctAnswer]
 }
 
-const runGcdGame = () => runGame(description, generateRound)
+const runGcdGame = () => runGame(DESCRIPTION, generateRound)
 
 export default runGcdGame
